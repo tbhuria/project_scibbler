@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Include css file here-->
+    <link href="..\styles\post.css" rel='stylesheet' type='text/css'>
+    <link href="..\styles\common.css" rel='stylesheet' type='text/css'>
+
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+    <script src=../scripts/post.js></script>
+    
+</head>
+
+<body>
+
+    <!-- TODO: Include code for header here -->
+    <div class="header">
+        <button id="SignUp" class="login-btn">Sign Up</button>
+        <button id="SignIn" class="login-btn">Sign In</button>
+        <h2 id="main-logo">ScriBBler</h2>
+        <p id="subheading">Explore, Imagine, Create</p>
+    </div>
+
+    <div id="myModal1" class="modal">
+
+        <!-- Modal content for Sign-Up -->
+        <div class="modal-content">
+            
+            <form class="signup-form">
+            <div class="container">
+                <p id='modalheading'>
+                <span >Get Started</span>
+                <span class="close">&times;</span>
+                <hr>
+                </p>
+                    <label for="SignupName">Name</label>
+                    <input id="signupName" type="text" placeholder="Enter your name" required>
+                    <label for="SignupUsername">Username</label>
+                    <input id="signupMail" type="text" placeholder="Enter your username" required>
+                    <label for="SignupPassword">Password</label>
+                    <input id="signupPassword" type="password" placeholder="Enter your password" required>
+                    <label for="SignupPassword">Confirm Password</label>
+                    <input id="confirmPassword" type="password" placeholder="Re-enter your password" required>
+                    <button type="submit" class="blog-btn">Sign Up</button>              
+            </div>
+            </form>
+        </div>  
+      </div>
+
+      <div id="myModal2" class="modal">
+
+        <!-- Modal content for Sign-in -->
+        <div class="modal-content">
+            
+            <form class="signin-form">
+                <div class="container">
+                    <p id='modalheading'>
+                        <span >Welcome Back!</span>
+                        <span class="close">&times;</span>
+                    <hr>
+                    </p>
+                    <label for="SigninUsername">Username</label>
+                    <input id="signinMail" type="text" placeholder="Enter your username" required>
+                    <label for="SigninPassword">Password</label>
+                    <input id="signinPassword" type="password" placeholder="Enter your password" required>
+                    <button type="submit" class="blog-btn">Sign In</button>            
+                </div>
+                <div class="SignUp-lnk">
+                    <p><b>Not a member? </b><span id='switchSingUp' onclick="signupOption()">Sign Up</span></p>
+                </div>
+            </form>
+        </div> 
+      </div>
+
+    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+
+    <!-- Post detail division -->
+    <div class="post container">
+        <div class="heading-content" id="editHeading" contenteditable="true"></div>
+        <div class="author">
+            <div class="author-name"></div>
+            <div>
+                <button id="editBtn" type="button" class="btn btn-danger" onclick="editHeaderAndContent()">Edit<i class="fa fa-edit"
+                        style="padding-left: 4px;"></i></button>
+            </div>
+        </div>
+
+        <div class="post-content" id="editContent" contenteditable="true">
+        </div>
+
+        <button id="like-button" type="button" class="btn btn-danger" onclick="updateLikes()"><i
+                class="fa fa-thumbs-up"></i><span id="likeButton">Like</span></button>
+        <div id="showCount">Be the first one to like this</div>
+
+        <textarea id="comment" rows="4" cols="150" placeholder="Leave a comment..." name="comment"></textarea>
+        <div><button id="like-button" type="button" class="btn btn-danger"
+                onclick="addComment(comment)">Comment</button></div>
+        <div id="allCommentsHeading">All Comments</div>
+        <div class="comment-container">
+            <div id="comments">
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/common.js"></script>
+
+</body>
+</html>

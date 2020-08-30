@@ -1,10 +1,12 @@
-function removeCard(card){
+function removeElement(card){
 	document.getElementById(card).parentNode.removeChild(document.getElementById(card));
 }
 
-function redirect(){
-	window.location.href = "../html/post.html";	
+function redirect(user,heading,content){
+	window.location.href = "../html/post.html?heading=" + encodeURIComponent(heading.innerText) + "&author=" +
+	 encodeURIComponent(user.innerText) + "&content=" +encodeURIComponent(content.innerText);	
 }
+
 
 
 
