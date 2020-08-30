@@ -4,6 +4,8 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!--Include css file here-->
     <link href="..\styles\postslist.css" rel='stylesheet' type='text/css'>
@@ -12,6 +14,16 @@
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -82,7 +94,7 @@
         <!-- post 1 starts here -->
         <div id='post1' class="posts">
             <div class="posts-left">
-                <p id='author1' class="author">Srishti Gupta</p>
+                <span id='author1' class="author">Srishti Gupta</span>
             </div>
 
             <div class="posts-content">
@@ -91,14 +103,15 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash  fa-1x" aria-hidden="true" id="trash1"></i>
                     </span>
-                    <p id= 'post1-title' class="post-title" >‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                    <span id= 'title1' class="post-title" >‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</span>
                     
                 </div>
-                <p id='post1-content' class="post-content">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+                <p id='content1' class="post-content">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis1" onclick="redirect()"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis1" onclick="redirect(author1, title1, content1)"></i>
                 </span>
+                
             </div>
             <div id="deletePost1" class="delete">
 
@@ -125,11 +138,12 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash  fa-1x" aria-hidden="true" id="trash2"></i>
                     </span>
-                    <p id= 'post2-title' class="post-title">What is linting and how can it save you time?</p> 
+                    <p id= 'title2' class="post-title">What is linting and how can it save you time?</p> 
                 </div>
-                <p id='post2-content' class="post-content">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                <span class="ellipsis" onclick="redirect('author2', 'post2-title', 'post2-content')">
-                    <i style="font-size:24px" class="fa">&#xf141;</i>
+                <p id='content2' class="post-content">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+                <span>
+                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis3" onclick="redirect(author2, title2, content2)"></i>
                 </span>
             </div>
             <div id="deletePost2" class="delete">
@@ -137,7 +151,7 @@
                 <!-- Modal content -->
                 <div class="delete-content">
                   <p class="delete-message">Are you sure you want to delete this post? </p>
-                  <button class='yes-btn' id="yes-btn2" onclick="removeElement()">Yes</button>
+                  <button class='yes-btn' id="yes-btn2" onclick="removeElement('post2')">Yes</button>
                   <button class='no-btn'id="no-btn2">No</button>
                 </div>
               
@@ -157,12 +171,12 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash  fa-1x" aria-hidden="true" id="trash3"></i>
                     </span>
-                    <p id= 'post3-title' class="post-title">How to Get More Views on Your Tech Blog</p>
+                    <p id= 'title3' class="post-title">How to Get More Views on Your Tech Blog</p>
                 </div>
-                <p id='post3-content' class="post-content">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+                <p id='content3' class="post-content">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis3" onclick="redirect(author3, post3-title, post3-content)"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis3" onclick="redirect(author3, title3, content3)"></i>
                 </span>
             </div>
             <div id="deletePost3" class="delete">
@@ -170,7 +184,7 @@
                 <!-- Modal content -->
                 <div class="delete-content">
                   <p class="delete-message">Are you sure you want to delete this post? </p>
-                  <button class='yes-btn' id="yes-btn3" onclick="removeElement()">Yes</button>
+                  <button class='yes-btn' id="yes-btn3" onclick="removeElement('post3')">Yes</button>
                   <button class='no-btn'id="no-btn3">No</button>
                 </div>
               
@@ -190,13 +204,13 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash  fa-1x" aria-hidden="true" id="trash4"></i>
                     </span>
-                    <p id= 'post4-title' class="post-title">How to write easily describable code</p>
+                    <p id= 'title4' class="post-title">How to write easily describable code</p>
                 </div>
-                <p id='post4-content' class="post-content">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                <p id='content4' class="post-content">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
                     leads to confusion when discussing the code.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis4" onclick="redirect(author4, post4-title, post4-content)"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis4" onclick="redirect(author4, title4, content4)"></i>
                 </span>
             </div>
             <div id="deletePost4" class="delete">
@@ -204,7 +218,7 @@
                 <!-- Modal content -->
                 <div class="delete-content">
                   <p class="delete-message">Are you sure you want to delete this post? </p>
-                  <button class='yes-btn' id="yes-btn4" onclick="removeElement()">Yes</button>
+                  <button class='yes-btn' id="yes-btn4" onclick="removeElement('post4')">Yes</button>
                   <button class='no-btn'id="no-btn4">No</button>
                 </div>
               
@@ -224,13 +238,13 @@
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <i class="fa fa-trash  fa-1x" aria-hidden="true" id="trash5"></i>
                     </span>
-                    <p id= 'post5-title' class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <p id= 'title5' class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                 </div>
-                <p id='post5-content' class="post-content">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                <p id='content5' class="post-content">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
                     named xyz.</p>
                 <span>
                     <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis5" onclick="redirect(author5, post5-title, post5-content)"></i>
+                    <i class="fa fa-ellipsis-h" aria-hidden="true" id="ellipsis5" onclick="redirect(author5, title5, content5)"></i>
                 </span>
             </div>
             <div id="deletePost5" class="delete">
@@ -238,7 +252,7 @@
                 <!-- Modal content -->
                 <div class="delete-content">
                   <p class="delete-message">Are you sure you want to delete this post? </p>
-                  <button class='yes-btn' id="yes-btn5" onclick="removeElement()">Yes</button>
+                  <button class='yes-btn' id="yes-btn5" onclick="removeElement('post5')">Yes</button>
                   <button class='no-btn' id="no-btn5">No</button>
                 </div>
               
@@ -251,7 +265,9 @@
     <!-- list of all posts ends here -->
 
     <!-- Place all Javascript for header in this file -->
-	<script src="..\scripts\common.js"></script>
+    <script src="..\scripts\common.js"></script>
+    
+    
 	<!-- Place all Javascript for rest of the elements in this file -->
     <script src="..\scripts\postslist.js"></script>
 </body>
